@@ -4,7 +4,9 @@ import { authApi } from '../utils/api';
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
+
 export const useAuth = () => {
+  const url = "https://student-backend-02ye.onrender.com"
   const context = useContext(AuthContext);
   if (context === undefined) {
     throw new Error('useAuth must be used within an AuthProvider');
